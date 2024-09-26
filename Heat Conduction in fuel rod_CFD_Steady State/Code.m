@@ -1,5 +1,4 @@
 close all;
-clc;
 %Specifying no of grids
 n=201;
 nx=200; 
@@ -38,7 +37,7 @@ while itr<=500
                    T(i,j)=0.25*(X^2+T(i,j-1)+T(i+1,j)+T(i-1,j)+T(i,j+1));
                  end 
              end
-        %convective boundary conditions
+%convective boundary conditions
              for i=77:101
                  T(i,201)=T(i,200)/(1+Bi*X);
              end
